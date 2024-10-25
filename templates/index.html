@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Careers</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="{{url_for('static', filename='images/logo.jpg')}}" width="70" height="70" alt="Logo">
+            <li><a href="#">Welcome to Student Careers</a></li>
+            <li><a href="#about">About</a></li> <!-- Added About link -->
+        </ul>
+    </nav>
+
+    <h2>Faculty of Accounting & Informatics</h2>
+    <a href="{{url_for('accounting')}}" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
+        <img src="{{url_for('static', filename='images/accounting.jpg')}}" alt="Accounting Faculty">
+        <p>Management Accounting</p>
+        <p>Information Technology</p>
+        <p>Auditing and Taxation</p>
+    </a>
+
+    <h2>Faculty of Art and Design</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/art.jpg')}}" alt="Art Faculty">
+        <p>Drama & Production Studies</p>
+        <p>Fashion and Textiles</p>
+        <p>Media, Language and Communication</p>
+    </div>
+
+    <h2>Faculty of Applied Sciences</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/chemistry.jpg')}}" alt="Applied Sciences Faculty">
+        <p>Biotechnology and Food Science</p>
+        <p>Chemistry</p>
+        <p>Maritime Studies</p>
+    </div>
+
+    <h2>Faculty of Business</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/business.jpg')}}" alt="Business Faculty">
+        <p>Business Management</p>
+        <p>Human Resources Management</p>
+        <p>Marketing Management</p>
+    </div>
+
+    <h2>Faculty of Education</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/education.jpg')}}" alt="Education Faculty">
+        <p>Foundation Phase</p>
+        <p>Intermediate Phase</p>
+        <p>Senior Phase/Further Education & Training</p>
+    </div>
+
+    <h2>Faculty of Engineering</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/engineering.jpg')}}" alt="Engineering Faculty">
+        <p>Civil Engineering</p>
+        <p>Electrical Engineering</p>
+        <p>Mechanical Engineering</p>
+    </div>
+
+    <h2>Faculty of Health Sciences</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/health.jpg')}}" alt="Health Sciences Faculty">
+        <p>Dental Science</p>
+        <p>Nursing</p>
+        <p>Emergency Medical Care and Rescue</p>
+    </div>
+
+    <h2>Faculty of Hospitality & Tourism</h2>
+    <div class="faculty">
+        <img src="{{url_for('static', filename='images/hospitality.jpg')}}" alt="Hospitality Faculty">
+        <p>Hospitality & Catering</p>
+        <p>Tourism</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Student Careers! We are dedicated to helping students explore various career paths and providing resources to assist them in their academic journey. Our faculties offer a diverse range of programs tailored to meet the needs of today’s workforce.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Student Careers. All rights reserved.</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+</body>
+</html>
+
