@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Institutions</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <style>
+        h1 {
+         color: #0de02d;
+         text-align: center;
+     }
+     .pro {
+         margin-bottom: 20px;
+     }
+     .item {
+         font-weight: bold;
+         cursor: pointer;
+         margin: 10px 0;
+         color: rgb(99, 9, 244);
+     }
+     .cover {
+         display: none;
+         margin: 10px 0 20px 0;
+         font-weight: bold;
+     }
+ </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="{{url_for('static', filename='images/logo.jpg')}}" width="70" height="70" alt="Logo">
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('faculties')}}" target="_blank">Faculties</a></li>
+            <li><a href="{{url_for('institutions')}}" target="_blank">Institutions</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <h1>Public Institutions</h1>
+    <div class="pro">
+        <div class="item">University of Kwazulu-Natal</div>
+        <div class="cover">The University of KwaZulu-Natal (UKZN) is a prominent public research university located in South Africa, with multiple campuses in and around Durban. 
+            It offers a wide range of undergraduate and postgraduate programs across various disciplines, including arts, sciences, engineering, health sciences, and business.</div>
+    </div>
+
+    <div class="pro">
+        <div class="item">Durban University of Technology</div>
+        <div class="cover">The Durban University of Technology (DUT) is a public university in South Africa, located in Durban. 
+            It offers a range of programs across various fields, including engineering, health sciences, arts, and business. DUT is known for its focus on practical and applied learning, as well as its strong emphasis on research and community engagement.</div>
+    </div>
+    <div class="pro">
+        <div class="item">University of Zululand</div>
+        <div class="cover">
+            The University of Zululand (UniZulu) is a public university located in KwaZulu-Natal, South Africa. 
+            It offers a range of undergraduate and postgraduate programs across various fields, including arts, sciences, education, commerce, and law.</div>
+    </div>
+
+    <div class="pro">
+        <div class="item">Mangosuthu University of Technology</div>
+        <div class="cover">The Mangosuthu University of Technology (MUT) is a public university located in Umlazi, KwaZulu-Natal, South Africa. 
+            It focuses on providing higher education in engineering, natural sciences, and management sciences, among other fields.</div>
+    </div>
+        <!-- About Section -->
+        <br>
+        <hr>
+       <section id="about">
+           <h2>About Us</h2>
+           <p>Welcome to Student Careers! We are dedicated to helping students explore various career paths and providing resources to assist them in their academic journey. Our faculties offer a diverse range of programs tailored to meet the needs of today’s workforce.</p>
+       </section>
+   
+       <!-- Footer -->
+       <footer>
+           <p>&copy; 2024 Student Careers. All rights reserved.</p>
+           <p><a href="#top">Back to top</a></p>
+       </footer>
+    <script>
+        const questions = document.querySelectorAll('.item');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
