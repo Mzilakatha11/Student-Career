@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounting</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='accounting.css') }}">
+    <title>Art and Design</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='art.css') }}">
 </head>
 <body>
     <nav>
@@ -15,26 +15,26 @@
         </ul>
     </nav>
 
-    <h2>Faculty of Accounting - Enter Your Matric Results</h2>
+    <h2>Faculty of Art and Design - Enter Your Matric Results</h2>
 
     <form method="POST">
-        <label for="math">Mathematics:</label>
+        <label for="math">Mathematics/Mathematical Literacy:</label>
         <input type="number" name="math" id="math" min="0" max="100" required>
 
-        <label for="accounting">Accounting:</label>
+        <label for="accounting">Dramatic Arts:</label>
         <input type="number" name="accounting" id="accounting" min="0" max="100" required>
 
-        <label for="business_studies">Business Studies:</label>
+        <label for="business_studies">History:</label>
         <input type="number" name="business_studies" id="business_studies" min="0" max="100" required>
 
-        <label for="economics">Economics:</label>
+        <label for="economics">Economics/Life Science:</label>
         <input type="number" name="economics" id="economics" min="0" max="100" required>
 
-        <label for="english_home">English Home Language:</label>
-        <input type="number" name="english_home" id="english_home" min="0" max="100" required>
+        <label for="english_home">English HL/FAL:</label>
+        <input type="number" name="english_home" id="english_home" min="40" max="100" required>
 
         <label for="life_orientation">Life Orientation:</label>
-        <input type="number" name="life_orientation" id="life_orientation" min="0" max="100" required>
+        <input type="number" name="life_orientation" id="life_orientation" min="50" max="100" required>
 
         <button type="submit">Check Eligibility</button>
     </form>

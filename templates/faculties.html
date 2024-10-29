@@ -17,7 +17,7 @@
         </ul>
     </nav>
 <h2>Faculty of Accounting & Informatics</h2>
-<a href="#" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
+<a href="{{url_for('accounting')}}" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
     <img src="{{url_for('static', filename='images/accounting.jpg')}}" alt="Accounting Faculty">
     <p>Management Accounting</p>
     <p>Information Technology</p>
@@ -25,15 +25,15 @@
 </a>
 
 <h2>Faculty of Art and Design</h2>
-<div class="faculty">
+<a href="{{url_for('art')}}" class="faculty">
     <img src="{{url_for('static', filename='images/art.jpg')}}" alt="Art Faculty">
     <p>Drama & Production Studies</p>
     <p>Fashion and Textiles</p>
     <p>Media, Language and Communication</p>
-</div>
+</a>
 
 <h2>Medicine, Medical Technology</h2>
-<a href="{{url_for('science')}}" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
+<a href="#" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
     <img src="{{url_for('static', filename='images/chemistry.jpg')}}" alt="Science Faculty">
     <p>Dental Therapy</p>
     <p>Pharmacy</p>
@@ -41,7 +41,7 @@
 </a>
 
 <h2>Administration</h2>
-<a href="{{url_for('business')}}" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
+<a href="#" class="faculty"> <!-- Replace 'your-link-here' with the desired URL -->
     <img src="{{url_for('static', filename='images/business.jpg')}}" alt="Business Faculty">
     <p>Business Administration</p>
     <p>Business & Information</p>
