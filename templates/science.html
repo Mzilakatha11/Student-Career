@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciences</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='accounting.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo">
+            <li class="welcome">Welcome to Student Careers</li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+        </ul>
+    </nav>
+
+    <h2>Faculty of Sciences - Enter Your Matric Results</h2>
+
+    <form method="POST">
+        <label for="math">Mathematics:</label>
+        <input type="number" name="math" id="math" min="0" max="100" required>
+
+        <label for="physics">Physics:</label>
+        <input type="number" name="physics" id="physics" min="0" max="100" required>
+
+        <label for="life_sciences">Life Sciences:</label>
+        <input type="number" name="life_sciences" id="life_sciences" min="0" max="100" required>
+
+        <label for="geography">Geography:</label>
+        <input type="number" name="geography" id="geography" min="0" max="100" required>
+
+        <label for="english_home">English Home Language:</label>
+        <input type="number" name="english_home" id="english_home" min="0" max="100" required>
+
+        <label for="life_orientation">Life Orientation:</label>
+        <input type="number" name="life_orientation" id="life_orientation" min="0" max="100" required>
+
+        <button type="submit">Check Eligibility</button>
+    </form>
+
+    <div class="result">
+        {% if eligible_courses %}
+            <h3>Your APS: {{ aps }}</h3><br>
+            <h3>You qualify for the following courses:</h3>
+            <ul>
+                {% for course in eligible_courses %}
+                    <li>{{ course }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            {% if aps > 0 %}
+                <h3>Your APS: {{ aps }}</h3>
+                <h3>Unfortunately, you don't qualify for any courses in this faculty.</h3>
+            {% else %}
+                <h3>Please enter your marks to calculate your APS.</h3>
+            {% endif %}
+        {% endif %}
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 Student Careers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
